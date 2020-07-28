@@ -9,7 +9,7 @@
                         <i v-if="!collapse" class="el-icon-s-fold"></i>
                         <i v-else class="el-icon-s-unfold"></i>
                     </div>
-                    <div class="logo">后台管理系统</div>
+                    <div class="logo">灰度发布管理系统</div>
                     <div class="header-right">
                         <div class="header-user-con">
                             <el-dropdown>
@@ -36,15 +36,6 @@
                             <div class="user-avator">
                                 <img src="../assets/img/img.jpg" />
                             </div>
-                            <el-dropdown class="user-name" trigger="click" @command="handleCommand">
-                                <span class="el-dropdown-link">
-                                    leon
-                                    <i class="el-icon-caret-bottom"></i>
-                                </span>
-                                <el-dropdown-menu slot="dropdown">
-                                    <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
-                                </el-dropdown-menu>
-                            </el-dropdown>
                         </div>
                     </div>
                 </div>
@@ -108,8 +99,13 @@ export default {
             routeList: [
                 {
                     icon: 'el-icon-s-home',
-                    index: 'dashboard',
-                    title: '系统首页'
+                    index: 'manage',
+                    title: '灰度服务管理'
+                },
+                {
+                    icon: 'el-icon-s-home',
+                    index: 'test',
+                    title: '灰度服务测试'
                 }
             ],
             fullscreen: false,

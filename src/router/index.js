@@ -7,7 +7,7 @@ export default new Router({
   routes: [
       {
           path: '/',
-          redirect: '/dashboard'
+          redirect: '/manage'
       },
       {
           path: '/',
@@ -15,9 +15,14 @@ export default new Router({
           component: () => import('@/components/Home'),
           children: [
               {
-                  path: '/dashboard',
+                  path: '/manage',
                   component: () => import('@/components/List'),
-                  meta: { title: '系统首页' }
+                  meta: { title: '灰度服务管理' }
+              },
+              {
+                  path: '/test',
+                  component: () => import('@/components/Test'),
+                  meta: { title: '灰度服务测试' }
               }
           ]
       }
